@@ -53,7 +53,7 @@ const questions = [
         message: 'Please provide your email address',
     }
 ];
-// function to write README file
+// function created to write README file
 function createREADME() {
     inquirer.createPromptModule(questions).then((answers) => {
         const readme = generateMarkdown(answers);
@@ -62,3 +62,7 @@ function createREADME() {
         );
     });
 }
+
+// function that is called to create README
+
+createREADME();
