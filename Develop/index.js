@@ -53,3 +53,12 @@ const questions = [
         message: 'Please provide your email address',
     }
 ];
+// function to write README file
+function createREADME() {
+    inquirer.createPromptModule(questions).then((answers) => {
+        const readme = generateMarkdown(answers);
+        fs.writeFile('README.md', readme, (err) =>
+        err ? console.log(err) : console.log('Sucessfully created README.md.')
+        );
+    });
+}
