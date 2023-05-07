@@ -20,10 +20,10 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
     if (license !== "None") {
         return `## License
-        This project is licensed under the ${license} license. To learn more please visit ${renderLicenseLink(license)}.`;
-         }
-         return "";
+            This project is licensed under the ${license} license. To learn more please visit ${renderLicenseLink(license)}.`;
     }
+         return "";
+}
     // function created to take in an email address as a parameter and retun as a markdown link that will open the user's email
     // with a new email addressed to the provided email
     function renderMailTo(email) {
@@ -55,10 +55,22 @@ function renderLicenseSection(license) {
 
         ${data.installation}
 
+        # Usage
 
+        ${renderLicenseSection(data.license)}
 
+        # Contributing
 
+        ${data.credits}
+
+        #Tests
+
+        ${data.tests}
+
+        # Questions
+
+        If any questions arise regarding the repository, open an issue or contact me at ${renderMailTo(data.email)}. Additional source where my work can be viewed at ${renderGithubLink(data.github)}.`;
     }
 
+    module.exports = generateMarkdown;
 
-}
