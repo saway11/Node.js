@@ -19,7 +19,7 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'Please provide installation information for your project',
+        message: 'Please provide installation instructions for your project.',
     },
     {
         type: 'input',
@@ -27,7 +27,7 @@ const questions = [
         message: 'Please provide usage information for your project.',
     },
     {
-        type: 'list',
+        type: 'input',
         name: 'credits',
         message: 'Please provide credits for your project.',
     },
@@ -45,22 +45,24 @@ const questions = [
     {
         type: 'input',
         name: 'github',
-        message: 'Please provide your Github username.',
+        message: 'Please provide your GitHub username.',
     },
     {
         type: 'input',
         name: 'email',
-        message: 'Please provide your email address',
+        message: 'Please provide your email address.',
     }
 ];
+    
 // function created to write README file
 function createREADME() {
-    inquirer.createPromptModule(questions).then((answers) => {
+    inquirer.prompt(questions).then((answers) => {
         const readme = generateMarkdown(answers);
         fs.writeFile('README.md', readme, (err) =>
-        err ? console.log(err) : console.log('Sucessfully created README.md.')
+            err ? console.log(err) : console.log('Successfully created README.md!')
         );
     });
+
 }
 
 // function that is called to create README
