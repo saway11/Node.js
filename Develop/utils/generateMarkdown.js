@@ -6,3 +6,12 @@ function renderLicenseBadge(license) {
     return "";
 
 }
+// Function that takes in a license string as a paramert and retuns a link to the correspinding license page
+function renderLicenseLink(license) {
+    if (license !== "None") {
+        return (
+         `https://choosealicense.com/licenses/${license.toLowerCase()}`   
+        );
+    }
+    return "";
+}
