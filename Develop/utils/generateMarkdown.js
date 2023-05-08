@@ -39,28 +39,28 @@ function renderLicenseSection(license) {
       }    
     // function to generate the README file contents
     function generateMarkdown(data) {
-        return `# ${data.title}
-        ${renderLicenseBadge(data.license)}
-        ## Description
-        ${data.description}
-        ## Table of Contents
-        - [Installation](#installation)
-        - [Usage](#usage)
-        - [Contributing](#credits)
-        - [License](#license)
-        - [Tests](#tests)
-        - [Questions](#questions)
-        ## Installation
-        ${data.installation}
-        ## Usage
-        ${data.usage}
-        ${renderLicenseSection(data.license)}
-        ## Contributing
-        ${data.credits}
-        ## Tests
-        ${data.tests}
-        ## Questions
-        If any questions arise regarding the repositoru, open an issue or contact me directly at ${renderMailTo(data.email)}. Additionally source where my work can be viewed is in ${renderGitHubLink(data.github)}.`;
-      }
+      return `# ${data.title}
+${renderLicenseBadge(data.license)}
+## Description
+${data.description}
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Tests](#tests)
+- [Questions](#questions)
+## Installation
+${data.installation}
+## Usage
+${data.usage}
+${renderLicenseSection(data.license)}
+## Contributing
+${data.credits}
+## Tests
+${data.tests}
+## Questions
+If any questions arise regarding the repository, open an issue or contact me directly at ${renderMailTo(data.email)}. Additionally source where my work can be viewed is in ${renderGitHubLink(data.github)}.`;
+}
       
       module.exports = generateMarkdown;

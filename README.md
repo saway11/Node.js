@@ -18,6 +18,7 @@ Install node.js and clone the Github repo
 Create a quality README
 
 # Functionality Video
+https://drive.google.com/file/d/1gmmjC6lDMegujYlooQ5vUoqqnlhixrml/view
 
 # License
 MIT License
